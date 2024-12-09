@@ -13,11 +13,9 @@ class johnIndent {
         this.token = "bot131728:3010a435-d549-4c37-9cc7-2f38b7b0ab2c"
     }
     async sendRequest(reqInf, body) {
-        console.log('send');
         axios.post(`https://eitaayar.ir/api/${this.token}/${reqInf}`, body)
     }
     async getPrice(coinName) {
-        console.log(`http://admin.alanchand.com/api/arz/${coinName}`);
         await axios.post(`http://admin.alanchand.com/api/arz/${coinName}`, { lang: "fa" }).then(response => {
             this.topTitle = response.data.top_text
             this.buyPriceCoin = response.data.price[0].price
@@ -25,8 +23,6 @@ class johnIndent {
             this.sellPriceCoin = response.data.price[2].price
             this.middleTxt = response.data.middle_text
             this.coinName = response.data.name
-        }).then(res => {
-            console.log(res);
         })
     }
     async getTime() {
