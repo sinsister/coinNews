@@ -68,7 +68,7 @@ const times = [
     { hour: 12, minute: 0 },
     { hour: 19, minute: 0 },
     { hour: 22, minute: 0 },
-    { hour: 1, minute: 52 }
+    { hour: 1, minute: 55 }
 ];
 times.forEach(t => {
 
