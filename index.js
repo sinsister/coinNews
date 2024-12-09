@@ -43,8 +43,12 @@ ${this.middleTxt}
 🔵قیمت خرید ${this.coinName}: ${this.buyPriceCoin}
 🔴 قیمت فروش ${this.coinName}: ${this.sellPriceCoin}
 ✅قیمت نهایی ${this.coinName}: ${this.targetPrice}
+
+#ارز_دیجیتال #ارز #دلار #یورو #دلارهرات #بورس #ترید #اخبار_بازار #اخبار
+
+ID | : 💎@chappar_office
 `,
-            chat_id: 'testBotL'
+            chat_id: 'chappar_office'
         }
         this.sendRequest("sendMessage", body)
     }
@@ -63,7 +67,8 @@ const times = [
     { hour: 8, minute: 0 },
     { hour: 12, minute: 0 },
     { hour: 19, minute: 0 },
-    { hour: 22, minute: 0 }
+    { hour: 22, minute: 0 },
+    { hour: 1, minute: 52 }
 ];
 times.forEach(t => {
 
