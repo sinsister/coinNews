@@ -14,6 +14,9 @@ class johnIndent {
     }
     async sendRequest(reqInf, body) {
         axios.post(`https://eitaayar.ir/api/${this.token}/${reqInf}`, body)
+            .then(res => {
+                console.log(res.data);
+            })
     }
     async getPrice(coinName) {
         await axios.post(`http://admin.alanchand.com/api/arz/${coinName}`, { lang: "fa" }).then(response => {
@@ -68,7 +71,7 @@ const times = [
     { hour: 12, minute: 0 },
     { hour: 19, minute: 0 },
     { hour: 22, minute: 0 },
-    { hour: 1, minute: 55 }
+    { hour: 2, minute: 15 }
 ];
 times.forEach(t => {
 
