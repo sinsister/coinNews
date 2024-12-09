@@ -36,19 +36,12 @@ class johnIndent {
             
 💵 ${this.coinName} 💵
 
-
 📰${this.topTitle}
-
 
 ${this.middleTxt}
 
-
 🔵قیمت خرید ${this.coinName}: ${this.buyPriceCoin}
-
-
 🔴 قیمت فروش ${this.coinName}: ${this.sellPriceCoin}
-
-
 ✅قیمت نهایی ${this.coinName}: ${this.targetPrice}
 `,
             chat_id: 'testBotL'
