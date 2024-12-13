@@ -92,7 +92,6 @@ const times = [
     { hour: 8, minute: 0 },
     { hour: 12, minute: 0 },
     { hour: 19, minute: 0 },
-    { hour: 22, minute: 0 },
 ];
 times.forEach(t => {
 
