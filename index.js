@@ -1,5 +1,6 @@
 const axios = require("axios")
 const schedule = require('node-schedule');
+const fs = require("fs")
 class johnIndent {
     constructor(topTitle, coinName, imgCoin, date, middleTxt, sellPriceCoin, buyPriceCoin, tPrice) {
         this.topTitle = topTitle
@@ -11,6 +12,17 @@ class johnIndent {
         this.sellPriceCoin = sellPriceCoin
         this.imgCoin = imgCoin
         this.token = "bot131728:3010a435-d549-4c37-9cc7-2f38b7b0ab2c"
+    }
+    async generateRandomName(length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let result = '';
+        const charactersLength = characters.length;
+
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+
+        return result;
     }
     async sendRequest(reqInf, body) {
         console.log();
@@ -54,6 +66,7 @@ class johnIndent {
             this.targetPrice = response.data.price[1].price
             this.sellPriceCoin = response.data.price[2].price
             this.middleTxt = response.data.middle_text
+            this.imgCoin = response.data.cash_image[2]
             this.coinName = response.data.name
         })
     }
@@ -88,13 +101,14 @@ async function sendRq() {
     }
 
 }
-const times = [
-    { hour: 8, minute: 0 },
-    { hour: 12, minute: 0 },
-    { hour: 19, minute: 0 },
-];
-times.forEach(t => {
+// const times = [
+//     { hour: 8, minute: 0 },
+//     { hour: 12, minute: 0 },
+//     { hour: 19, minute: 0 },
+// ];
+// times.forEach(t => {
 
-    schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
-})
+//     schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
+// })
+sendRq()
 console.log("bot is running...")
