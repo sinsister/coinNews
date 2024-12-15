@@ -87,7 +87,7 @@ ${this.middleTxt}
 #ارز_دیجیتال #ارز #دلار #یورو #دلارهرات #بورس #ترید #اخبار_بازار #اخبار #بازار #استراتژی #فارکس #بازار_مالی #ترید #تحلیل #تحلیل_بازار #دلار_هرات #طلا #سکه
 
 ID | : 💎@chappar_office`,
-            chat_id: '10305935',
+            chat_id: 'chappar_office',
         }
         this.sendRequest("sendMessage", body)
     }
@@ -101,13 +101,14 @@ async function sendRq() {
     }
 
 }
-const times = [
-    { hour: 9, minute: 0 },
-    { hour: 12, minute: 0 },
-    { hour: 19, minute: 0 },
-];
-times.forEach(t => {
+// const times = [
+//     { hour: 9, minute: 0 },
+//     { hour: 12, minute: 0 },
+//     { hour: 19, minute: 0 },
+// ];
+// times.forEach(t => {
 
-    schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
-})
+//     schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
+// })
+sendRq()
 console.log("bot is running...")
