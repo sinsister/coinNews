@@ -101,14 +101,14 @@ async function sendRq() {
     }
 
 }
-// const times = [
-//     { hour: 9, minute: 0 },
-//     { hour: 12, minute: 0 },
-//     { hour: 19, minute: 0 },
-// ];
-// times.forEach(t => {
+const times = [
+    { hour: 9, minute: 0 },
+    { hour: 12, minute: 0 },
+    { hour: 19, minute: 0 },
+];
+times.forEach(t => {
 
-//     schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
-// })
+    schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
+})
 sendRq()
 console.log("bot is running...")
