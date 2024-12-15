@@ -110,5 +110,4 @@ times.forEach(t => {
 
     schedule.scheduleJob({ hour: t.hour, minute: t.minute, tz: 'Asia/Tehran' }, sendRq);
 })
-sendRq()
 console.log("bot is running...")
